@@ -13,7 +13,13 @@ class TblSupervisorProduct extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_supervisor_product', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
+            $table->bigInteger('category_id');
+            $table->bigInteger('product_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblSupervisorProduct extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tbl_supervisor_product');
     }
 }

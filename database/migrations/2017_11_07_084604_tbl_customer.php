@@ -16,17 +16,16 @@ class TblCustomer extends Migration
         Schema::create('tbl_customer', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('fullname');
             $table->smallInteger('sex');
             $table->integer('phone');
-            $table->string('email')->unique();
+            $table->string('email',100)->unique();
             $table->string('address');
             $table->string('company');
             $table->string('tax_code');
             $table->string('company_code');
             $table->string('image');
-            $table->smallInt('status');
+            $table->smallInteger('status');
             $table->timestamps();
         });
     }

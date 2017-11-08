@@ -13,7 +13,15 @@ class TblOrderDetail extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_order_detail', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('order_id');
+            $table->bigInteger('product_id');
+            $table->string('quantity');
+            $table->integer('price');
+            $table->string('into_money');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class TblOrderDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tbl_order_detail');
     }
 }

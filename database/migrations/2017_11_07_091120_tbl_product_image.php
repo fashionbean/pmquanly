@@ -13,7 +13,13 @@ class TblProductImage extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_product_image', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('product_id');
+            $table->string('name');
+            $table->string('url');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblProductImage extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tbl_product_image');
     }
 }

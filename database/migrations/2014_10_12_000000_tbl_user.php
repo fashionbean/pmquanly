@@ -13,14 +13,14 @@ class TblUser extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('tbl_user', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('username');
             $table->string('password');
             $table->string('fullname');
             $table->smallInteger('sex');
             $table->integer('phone');
-            $table->string('email')->unique();
+            $table->string('email',100)->unique();
             $table->string('address');
             $table->string('image');
             $table->smallInteger('role');

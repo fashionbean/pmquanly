@@ -13,7 +13,13 @@ class TblProductDetail extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_product_detail', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('product_id');
+            $table->text('infomation');
+            $table->integer('price');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblProductDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tbl_product_detail');
     }
 }

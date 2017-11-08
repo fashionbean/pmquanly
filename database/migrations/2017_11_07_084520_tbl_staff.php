@@ -16,11 +16,10 @@ class TblStaff extends Migration
         Schema::create('tbl_staff', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('fullname');
             $table->smallInteger('sex');
             $table->integer('phone');
-            $table->string('email')->unique();
+            $table->string('email',100)->unique();
             $table->string('address');
             $table->integer('identity_number');
             $table->dateTime('birthday');
@@ -29,7 +28,7 @@ class TblStaff extends Migration
             $table->float('price');
             $table->string('position');
             $table->string('image');
-            $table->smallInt('status');
+            $table->smallInteger('status');
             $table->timestamps();
         });
     }
