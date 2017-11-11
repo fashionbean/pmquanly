@@ -19,6 +19,7 @@ class TblProduct extends Migration
             $table->string('name');
             $table->smallInteger('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

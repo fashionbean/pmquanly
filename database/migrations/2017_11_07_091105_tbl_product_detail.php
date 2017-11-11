@@ -19,6 +19,7 @@ class TblProductDetail extends Migration
             $table->text('infomation');
             $table->integer('price');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

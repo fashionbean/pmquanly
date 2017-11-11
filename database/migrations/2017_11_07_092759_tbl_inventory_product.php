@@ -23,6 +23,7 @@ class TblInventoryProduct extends Migration
             $table->dateTime('date_export');
             $table->string('unit');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

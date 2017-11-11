@@ -21,6 +21,7 @@ class TblOrderDetail extends Migration
             $table->integer('price');
             $table->string('into_money');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

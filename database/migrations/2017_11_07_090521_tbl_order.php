@@ -22,6 +22,7 @@ class TblOrder extends Migration
             $table->float('total_money');
             $table->smallInteger('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -19,6 +19,7 @@ class TblSupervisorProduct extends Migration
             $table->bigInteger('category_id');
             $table->bigInteger('product_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

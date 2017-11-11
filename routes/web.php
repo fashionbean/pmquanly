@@ -15,3 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('manage', function(){ return view('admin.index'); });
+Route::prefix('cate')->group(function(){
+    Route::get('add', ['as' => 'getCateAdd', 'use' => 'Admin/CategoryController@add']);
+});

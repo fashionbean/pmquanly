@@ -27,6 +27,7 @@ class TblUser extends Migration
             $table->smallInteger('status');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

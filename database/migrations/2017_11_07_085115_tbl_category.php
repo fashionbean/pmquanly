@@ -19,6 +19,7 @@ class TblCategory extends Migration
             $table->string('name');
             $table->smallInteger('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

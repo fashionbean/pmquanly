@@ -30,6 +30,7 @@ class TblStaff extends Migration
             $table->string('image');
             $table->smallInteger('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
